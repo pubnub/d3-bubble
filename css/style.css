@@ -1,0 +1,188 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto Light", "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", Helvetica, Arial, sans-serif; 
+    margin: 1em;
+    background: #293950;
+    color: #ecf0f0;
+}
+header {
+	
+}
+h1, h2, h3 {
+	margin: 0;
+	text-rendering: optimizeLegibility;
+}
+h1 {
+	font-size: 2.4em;
+	line-height: 1.4em;
+	font-family: 'Lobster Two';
+	font-style: italic;
+	text-shadow: 2px 4px 0 rgba(0,0,0,0.4);
+}
+h2 {
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+p, footer {
+	margin: 1em 0 .5em;
+	color: silver;
+}
+footer {
+	font-size: .8em;
+	margin-top: 3em;
+}
+
+fieldset {
+	border: 0;
+	z-index: -1;
+	margin: 0;
+}
+
+fieldset p {
+	position: absolute;
+	left: 1em;
+	opacity: 0.5;
+}
+
+fieldset p > span {
+	font-size: 2em;
+}
+
+legend {
+	width: 100%;
+	float: left;
+	margin-top: 1em;
+}
+
+#chart {
+	width: 100%;
+	text-align: center;
+	float: left;
+}
+
+input[type=button],  select {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto Light", "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", Helvetica, Arial, sans-serif; 
+	margin-top: 2em;
+	background: #5F799C;
+	border: 0 none;
+  	border-radius: 3px;
+  	color: #fff;
+  	cursor: pointer;
+  	font-size: 1em;
+  	line-height: 1.4em;
+  	padding: 0.3em 1.4em;
+}
+
+select {
+	margin: 0.5em 0 2em;
+	-webkit-appearance: none;
+	-moz-appearance: none; /* doesn't seem to be working */
+	padding: 0.3em 2.4em 0.3em 1.1em;
+	background: #5F799C url(../images/dropdown-arrow.png) no-repeat 90% 50%;
+}
+
+/* graph */
+
+legend > div {
+	width: 24px;
+	height: 24px;
+}
+
+legend > div::after {
+	content: attr(data-category);
+	display: inline-block;
+	margin-left: 30px;
+	line-height: 24px;
+	width: 250px;
+}
+
+circle, .other {
+  fill: #1abc9c;
+}
+
+/* 
+ISO Country code by regions: http://www.geohive.com/earth/gen_codes.aspx
+*/
+
+/* Northern America */
+.bm, .ca, .gl, .pm, .us,
+.noram {fill: #DF4949; background: #DF4949;}
+
+/* Latin America and the Caribbean */
+.ai, .ag, .aw, .bs, .bb, .bq, .vg, .ky, .cu, .cw, .dm, .do, .gp, .ht, .jm, .mq, .ms, .pr, .bl, .kn, .lc, .mf, .vc, .sx, .tt, .vi,
+.bz, .crr, .sv, .gt, .hn, .mx, .ni, .pa,
+.ar, .bo, .br, .cl, .co, .ec, .fk, .gf, .gy, .py, .pe, .sr, .uy, .ve,  
+.latam {fill: #E27A3F; background: #E27A3F;}
+
+/* Europe */
+.by, .bg, .cz, .hu, .md, .pl, .ro, .ru, .sk, .ua, 
+.ax, .dk, .ee, .fo, .fi, .gg, .is, .ie, .je, .lv, .lt, .im, .no, .sj, .se, .gb,
+.al, .ad, .ba, .hr, .gi, .gr, .va, .it, .mk, .mt, .me, .pt, .sm, .rs, .si, .es,
+.at, .be, .fr, .de, .li, .lu, .mc, .nl, .ch,
+.eu { fill: #EFC94C; background: #EFC94C;}
+
+/* Asia */
+.kz, .kg, .tj, .tm, .uz,
+.cn, .hk, .mo, .jp, .kp, .kr, .mn, .tw,
+.af, .bd, .bt, .in, .ir, .mv, .np, .pk, .lk,
+.bn, .kh, .id, .la, .my, .mm, .ph, .sg, .th, .tl, .vn,
+.am, .az, .bh, .cy, .ge, .iq, .il, .jo, .kw, .lb, .ps, .om, .qa, .sa, .sy, .tr, .ae, .ye, 
+.asia { fill: #9B59B6; background:  #9B59B6;}
+
+/* Oceania */
+.au, .cx, .cc, .nz, .nf,
+.fj, .nc, .pg, .sb, .vu,
+.gu, .ki, .mh, .fm, .nr, .mp, .pw,
+.as, .ck, .pf, .nu, .pn, .ws, .tk, .to, .tv, .wf,  
+.oceania {fill: #3498db; background: #3498db;}
+
+/* Africa */
+.bi, .km, .dj, .er, .et, .ke, .mg, .mw, .mu, .yt, .mz, .re, .rw, .sc, .so, .tz, .ug, .zm, .zw,
+.ao, .cm, .cf, .td, .cg, .cd, .gq, .ga, .st,
+.dz, .eg, .ly, .ma, .ss, .sd, .tn, .eh,
+.bw, .ls, .na,  .za, .sz,
+.bj, .bf, .cv, .gm, .gh, .gn, .gw, .lr, .ml, .mr, .ne, .ng, .sh, .sn, .sl, .tg, 
+.africa {fill: #F495A3; background: #F495A3;}
+
+/* Unclassified */
+.aq, .bv, .io, .tf, .hm, .gs, .um, 
+.a1, .a2, .o1, 
+.other { fill: #45B29D; background: #45B29D;}
+
+
+
+
+@media only screen and (min-width: 500px) {
+	h1 {
+		font-size: 4.75em;
+		line-height: 1.5em;
+	}
+	fieldset p > span {
+		font-size: 3em;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	fieldset p {
+		bottom: 0;
+	}
+	legend {
+		width: 25%;
+		float: right;
+		margin-top: 0;
+	}
+
+	#chart {
+		width: 75%;
+		text-align: center;
+		float: left;
+		margin-top: -35px;
+	} 
+
+	input[type=button] {
+		margin-top: 4em;
+	}
+}	
