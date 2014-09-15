@@ -1,7 +1,7 @@
 # D3 Bubble Chart with PubNub Live JSON Demo
 
 
-A visual D3 chart showcase, using [Pubnub][pubnub] streaming network JavaScript API.
+This demo showcases a data visualization, written with [D3.js][d3] and [PubNub][pubnub] data streaming network JavaScript API.
 
 You may say, "OK, it looks pretty but what does this chart really mean?" - Well, it shows message volume per country from an each PubNub data center.
 The size of each bubble corresponds with volume. 
@@ -21,7 +21,7 @@ Anyway, the country names are not labeled, however, you can open a dev console t
 ![Screencast](http://pubnub.com/blog/wp-content/uploads/2014/09/d3-bubble-demo.gif "Screencast")
 
 
-
+[d3]: http://d3js.org/
 [demo]: http://pubnub.github.io/d3-bubble
 [pubnub]: http://www.pubnub.com/docs/javascript/javascript-sdk.html
 
