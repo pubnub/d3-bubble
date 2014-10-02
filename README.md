@@ -10,12 +10,13 @@ I initentionally did not add labels to the bubbles to avoid clutter, also to sim
 
 Anyway, the country names are not labeled, however, you can open a dev console to see abbriviated country codes as class name.
 
+## Turorial
 
+My article on [Developer.com][tut]
 
 ## Demo
 
 [Try it now!][demo]
-
 
  
 ![Screencast](http://pubnub.com/blog/wp-content/uploads/2014/09/d3-bubble-demo.gif "Screencast")
@@ -24,4 +25,4 @@ Anyway, the country names are not labeled, however, you can open a dev console t
 [d3]: http://d3js.org/
 [demo]: http://pubnub.github.io/d3-bubble
 [pubnub]: http://www.pubnub.com/docs/javascript/javascript-sdk.html
-
+[tut]: http://www.developer.com/java/fun-with-d3.js-data-visualization-eye-candy-with-streaming-json.html
