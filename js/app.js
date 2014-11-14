@@ -65,7 +65,7 @@
 		// create the transition on the updating elements before the entering elements 
 		// because enter.append merges entering elements into the update selection
 
-		var duration = 200;
+		var duration = 500;
 		var delay = 0;
 
 		// update - this is created before enter.append. it only applies to updating nodes.
@@ -79,18 +79,26 @@
 		// enter - only applies to incoming elements (once emptying data)	
 		vis.enter().append('circle')
 			.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
-			.attr('r', function(d) { return d.r; })
+			.attr('r', function(d) { return 0; })
 			.attr('class', function(d) { return d.className; })
-			.style('opacity', 0) 
 			.transition()
 			.duration(duration * 1.2)
+			.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
+			.attr('r', function(d) { return d.r; })
 			.style('opacity', 1);
 
 		// exit
 		vis.exit()
 			.transition()
-			.duration(duration + delay)
-			.style('opacity', 0)
+			.duration(duration)
+			.attr('transform', function(d) { 
+				var dy = d.y - diameter/2;
+				var dx = d.x - diameter/2;
+				var theta = Math.atan2(dy,dx);
+				var destX = diameter * (1 + Math.cos(theta) )/ 2;
+				var destY = diameter * (1 + Math.sin(theta) )/ 2; 
+				return 'translate(' + destX + ',' + destY + ')'; })
+			.attr('r', function(d) { return 0; })
 			.remove();
 	}
 
