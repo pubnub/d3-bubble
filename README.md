@@ -12,7 +12,7 @@ Anyway, the country names are not labeled, however, you can open a dev console t
 
 ## Turorial
 
-My article on [Developer.com][tut]
+[Fun with D3js: Data Visualization Eye Candy with Streaming JSON][tut-pubnub]
 
 ## Demo
 
@@ -26,3 +26,4 @@ My article on [Developer.com][tut]
 [demo]: http://pubnub.github.io/d3-bubble
 [pubnub]: http://www.pubnub.com/docs/javascript/javascript-sdk.html
 [tut]: http://www.developer.com/java/fun-with-d3.js-data-visualization-eye-candy-with-streaming-json.html
+[tut-pubnub]: http://www.pubnub.com/blog/fun-with-d3js-data-visualization-eye-candy-with-streaming-json/
