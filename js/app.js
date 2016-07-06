@@ -110,7 +110,8 @@
 	var channel = 'rts-xNjiKP4Bg4jgElhhn9v9';
 
 	var pubnub = PUBNUB.init({
-		subscribe_key: 'e19f2bb0-623a-11df-98a1-fbd39d75aa3f'
+		subscribe_key: 'e19f2bb0-623a-11df-98a1-fbd39d75aa3f',
+		ssl: (('https:' == document.location.protocol) ? true : false)
 	});
 
 	function getData() {
